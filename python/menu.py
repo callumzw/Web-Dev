@@ -1,18 +1,18 @@
-from flask import Flask
+from flask import Flask, render_template, request, url_for, redirect
 app = Flask(__name__)
 
 @app.route('/')
 def mainMenu():
-    return 'Hello Napier'
+    return render_template('templates/menu.html')
 
 @app.errorhandler(404)
 def page_not_found(error):
     return "Couldnt find the page you have requested", 4040
 
 @app.route('/private')
-def private()
+def private():
 # check if logged in
-return redirect(url_for('login'))
+    return redirect(url_for('login'))
 
 @app.route('/login')
 def login ():
