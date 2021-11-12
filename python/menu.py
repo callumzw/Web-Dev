@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def mainMenu():
-    return render_template('templates/menu.html')
+    return render_template('menu.html')
 
 @app.errorhandler(404)
 def page_not_found(error):
@@ -15,8 +15,41 @@ def private():
     return redirect(url_for('login'))
 
 @app.route('/login')
-def login ():
+def login():
     return "Fill in username & password"
+
+@app.route('/register')
+def register():
+    return "Create a username and password"
+
+@app.route ('/account')
+def account():
+    return "Account information, would you like to change any info?"
+
+@app.route ('/acccount/edit')
+def edit():
+    return "    Edit password   |   Edit Character"
+
+@app.route ('/about')
+def about():
+    return "This game was developd by C Grant, Click here to learn about the Story @ /n     Click here to learn how to play @"
+
+@app.route ('/about/story')
+def story():
+    return "Your a ravvller in he Appalachain Mountains searhcing for a new life"
+
+@app.route ('/about/gameplay')
+def gameplay():
+    return "This ia your standard point-and-click adventure game"
+
+@app.route ('/play')
+def play():
+    return "Press Play"
+
+@app.route ('/play/game')
+def game():
+    return "        Welcome tothe Appalachian Trails!"
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
