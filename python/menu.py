@@ -1,6 +1,7 @@
-import configparser
-from flask import Flask, render_template, request, url_for, redirect
+import configparser, sqlite3
+from flask import Flask, render_template, request, url_for, redirect,g
 app = Flask(__name__)
+db_location = 'var/sqlite3.db'
 
 def init (app):
     config = configparser.ConfigParser()
@@ -17,6 +18,26 @@ def init (app):
 
 init(app)
 
+def get_db():
+    db = getattr(g, 'db', None)
+    if db is None:
+        db = sqlite3.connect(db_location)
+        g.db = db
+        return db
+
+@app.teardown_appcontext
+def close_db_connection(exception):
+    db = getattr(g, 'db', None)
+    if db is not None:
+        db.close()
+
+def init_db():
+    with app.app_context():
+        db = get_db()
+        with app.open_resource('schema.sql', mode='r') as f:
+            db.cursor().executescript(f.read())
+            db.commit()
+
 @app.route('/')
 def mainMenu():
     return render_template('menu.html')
@@ -32,10 +53,21 @@ def private():
 
 @app.route('/login')
 def login():
+    db = get_db()
+    page = []
+    sql = "SELECT * FROM users WHERE user_name=user"
+    for row in db.cursor().execute(sql):
+        page.append(str(row))
+    if (page == bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+            return True
+        return False
     return "Fill in username & password"
 
 @app.route('/register')
 def register():
+    db = get_db()
+    db.cursor().execute('insert into users values ("username", "password")')
+    db.commit()
     return "Create a username and password"
 
 @app.route ('/account')
