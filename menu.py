@@ -1,6 +1,6 @@
 import configparser, sqlite3
 from flask import Flask, render_template, request, url_for, redirect,g
-app = Flask(__name__)
+app = Flask(__name__, template_folder='template')
 db_location = 'var/sqlite3.db'
 
 def init (app):
@@ -56,12 +56,10 @@ def login():
     db = get_db()
     page = []
     sql = "SELECT * FROM users WHERE user_name=user"
-    for row in db.cursor().execute(sql):
-        page.append(str(row))
-    if (page == bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
-            return True
-        return False
-    return "Fill in username & password"
+    #for row in db.cursor().execute(sql):
+    #    page.append(str(row))
+   # if (page == bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+    return render_template('log.html')
 
 @app.route('/register')
 def register():
@@ -96,7 +94,7 @@ def play():
 
 @app.route ('/play/game')
 def game():
-    return "        Welcome tothe Appalachian Trails!"
+    return "        Welcome to the Appalachian Trails!"
 
 
 if __name__ == "__main__":
