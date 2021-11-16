@@ -39,14 +39,14 @@ def init_db():
             db.commit()
 
 def check_user(password):
-    if (valid_password == bcrypt.hashpw(password.encode('utf-8'), valid_password)):
+    if (valid_password == bcrypt.hashpw(password.encode('utf-8'), bcrpyt.gensalt())):
         return True
     return False
     
 def requires_login(f):
     @wraps(f)
     def decorated(*args, **kwargs):
-        status - session.get('logged_in', False)
+        status = session.get('logged_in', False)
         if not status:
             return redirect(render_template('log.html'))
         return f(*args, **kwargs)
@@ -70,15 +70,19 @@ def private():
 # check if logged in
     return redirect(url_for('login'))
 
-@app.route('/login')
+@app.route('/login', methods-['GET', 'POST'])
 def login():
     db = get_db()
     page = []
-    sql = "SELECT * FROM users WHERE user_name=user"
-    #for row in db.cursor().execute(sql):
-    #    page.append(str(row))
-   # if (page == bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
-    if check_user(pw)
+    if request.method == 'POST':
+        user = request.form['username']
+        pw = request.form['password']
+    sql = "SELECT password FROM users WHERE user_name= '" + user "'"
+    for row in db.cursor().execute(sql):
+        page.append(str(row))
+
+    if (page == bcrypt.hashpw(pw.encode('utf-8'), bcrypt.gensalt()):
+            return redirect(url_for('.game'))
     return render_template('log.html')
 
 @app.route('/register', methods=['GET', 'POST'])
