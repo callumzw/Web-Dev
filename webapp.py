@@ -1,4 +1,4 @@
-import configparser, sqlite3
+import configparser, sqlite3, bcrypt
 from flask import Flask, render_template, request, url_for, redirect,g
 app = Flask(__name__, template_folder='template')
 db_location = 'var/sqlite3.db'
@@ -6,7 +6,7 @@ db_location = 'var/sqlite3.db'
 def init (app):
     config = configparser.ConfigParser()
     try :
-        config_location = "etc/test.cfg"
+        config_location = "etc/defaults.cfg"
         config.read(config_location)
 
         app.config ['DEBUG'] = config.get ("config", "debug")
@@ -34,9 +34,28 @@ def close_db_connection(exception):
 def init_db():
     with app.app_context():
         db = get_db()
-        with app.open_resource('schema.sql', mode='r') as f:
+        with app.open_resource('static/sql/schema.sql', mode='r') as f:
             db.cursor().executescript(f.read())
             db.commit()
+
+def check_user(password):
+    if (valid_password == bcrypt.hashpw(password.encode('utf-8'), valid_password)):
+        return True
+    return False
+    
+def requires_login(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        status - session.get('logged_in', False)
+        if not status:
+            return redirect(render_template('log.html'))
+        return f(*args, **kwargs)
+    return decorated
+
+@app.route('/logout')
+def logout():
+    session['logged_in'] = False
+    return redirect(render_template('log.html'))
 
 @app.route('/')
 def mainMenu():
@@ -59,14 +78,19 @@ def login():
     #for row in db.cursor().execute(sql):
     #    page.append(str(row))
    # if (page == bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+    if check_user(pw)
     return render_template('log.html')
 
-@app.route('/register')
+@app.route('/register', methods=['GET', 'POST'])
 def register():
     db = get_db()
-    db.cursor().execute('insert into users values ("username", "password")')
+    if request.method == 'POST':
+        user = request.form['username']
+        pw = request.form['password']
+    pw = bcrypt.hashpw(pw.encode('utf-8'))
+    db.cursor().execute('insert into users values ("' + user + '", "p' + pw '")')
     db.commit()
-    return "Create a username and password"
+    return render_template('log.html')
 
 @app.route ('/account')
 def account():
