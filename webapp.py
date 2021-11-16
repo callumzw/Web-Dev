@@ -70,19 +70,19 @@ def private():
 # check if logged in
     return redirect(url_for('login'))
 
-@app.route('/login', methods-['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     db = get_db()
     page = []
     if request.method == 'POST':
         user = request.form['username']
         pw = request.form['password']
-    sql = "SELECT password FROM users WHERE user_name= '" + user "'"
-    for row in db.cursor().execute(sql):
-        page.append(str(row))
-
-    if (page == bcrypt.hashpw(pw.encode('utf-8'), bcrypt.gensalt()):
-            return redirect(url_for('.game'))
+        sql = ('SELECT user_password FROM users WHERE user_name="%s"'%(user))
+        for row in db.cursor().execute(sql):
+            page.append(str(row))
+            return page
+        if (page == bcrypt.hashpw(pw.encode('utf-8'), bcrypt.gensalt())):
+            return render_template('menu.html')
     return render_template('log.html')
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -91,9 +91,9 @@ def register():
     if request.method == 'POST':
         user = request.form['username']
         pw = request.form['password']
-    pw = bcrypt.hashpw(pw.encode('utf-8'))
-    db.cursor().execute('insert into users values ("' + user + '", "p' + pw '")')
-    db.commit()
+        pw = bcrypt.hashpw(pw.encode('utf-8'), bcrypt.gensalt())
+        db.cursor().execute('INSERT INTO users VALUES ("%s", "%s")'%(user,pw))
+        db.commit()
     return render_template('log.html')
 
 @app.route ('/account')
