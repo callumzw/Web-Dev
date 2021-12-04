@@ -52,11 +52,6 @@ def requires_login(f):
         return f(*args, **kwargs)
     return decorated
 
-@app.route('/logout')
-def logout():
-    session['logged_in'] = False
-    return redirect(render_template('log.html'))
-
 @app.route('/')
 def mainMenu():
     return render_template('menu.html')
@@ -70,19 +65,24 @@ def private():
 # check if logged in
     return redirect(url_for('login'))
 
+@app.route('/logout')
+def logout():
+    session['logged_in'] = False
+    return redirect(render_template('log.html'))
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     db = get_db()
-    page = []
     if request.method == 'POST':
         user = request.form['username']
         pw = request.form['password']
-        sql = ('SELECT user_password FROM users WHERE user_name="%s"'%(user))
-        for row in db.cursor().execute(sql):
-            page.append(str(row))
-            return page
-        if (page == bcrypt.hashpw(pw.encode('utf-8'), bcrypt.gensalt())):
+        sql = ('SELECT user_password FROM usersWHERE user_name="%s"'%(user))
+        db.cursor().execute(sql)
+        data = db.cursor().fetchall()
+        if (data == bcrypt.hashpw(pw.encode('utf-8'), bcrypt.gensalt())):
             return render_template('menu.html')
+        else: 
+            return ('lol not  %s'%(data))
     return render_template('log.html')
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -92,8 +92,12 @@ def register():
         user = request.form['username']
         pw = request.form['password']
         pw = bcrypt.hashpw(pw.encode('utf-8'), bcrypt.gensalt())
-        db.cursor().execute('INSERT INTO users VALUES ("%s", "%s")'%(user,pw))
-        db.commit()
+        try:
+            db.cursor().execute('INSERT INTO users VALUES ("%s", "%s")'%(user,pw))
+            db.commit()
+            return render_template('menu.html')
+        except:
+            return ('Error occured')
     return render_template('log.html')
 
 @app.route ('/account')
