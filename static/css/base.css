@@ -1,0 +1,20 @@
+html{
+	font-family: verdana;
+}
+a:link {color:inherit;}
+
+.logo{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 80%;
+}
+#navBar{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: auto;
+	min-height: 70px;
+	background-color: #035b1c;
+	font-color: white;
+}
