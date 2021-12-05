@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="../static/Javascript/base.js"></script>
+		<link rel ="stylesheet" href ="../static/CSS/base.css" type ="text/css/">
+	</head>
+	<body>
+	<header>
+		<a class="header_homelink" href="http://146.176.251.152:5000" title="Go to homepage">
+			<img id="logo" src="../static/img/logo.png">
+		</a>
+	</header>
+	<div id="navBar">
+		<nav class="covidNav">
+			<a href="{{ url_for('covid') }}">Covid-19</a>
+		</nav>
+		<nav class="mainNav">
+		<ul id="topMenu">
+			<li>
+			<a href="{{ url_for('news') }}">News</a>
+			</li>
+			<li>
+                        <a href="{{ url_for('topics') }}">Topics</a>
+                        </li>
+			<li>
+                        <a href="{{ url_for('departments') }}">Departments</a>
+                        </li>
+			<li>
+                        <a href="{{ url_for('government') }}">Government</a>
+                        </li>
+		</ul>
+		</nav>
+	</div>
+	<main id="content">
+		
+	</main>>
+	</body>
+</html>

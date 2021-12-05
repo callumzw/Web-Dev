@@ -54,11 +54,31 @@ def requires_login(f):
 
 @app.route('/')
 def mainMenu():
-    return render_template('menu.html')
+    return render_template('base.html')
 
 @app.errorhandler(404)
 def page_not_found(error):
     return "Couldnt find the page you have requested", 4040
+
+@app.route('/covid')
+def covid():
+    return render_template('base.html')
+
+@app.route('/news')
+def news():
+    return render_template('base.html')
+
+@app.route('/topics')
+def topics():
+    return render_template('base.html')
+
+@app.route('/departments')
+def departments():
+    return render_template('base.html')
+
+@app.route('/government')
+def government():
+    return render_template('base.html')
 
 @app.route('/private')
 def private():
@@ -104,29 +124,6 @@ def register():
 def account():
     return "Account information, would you like to change any info?"
 
-@app.route ('/acccount/edit')
-def edit():
-    return "    Edit password   |   Edit Character"
-
-@app.route ('/about')
-def about():
-    return "This game was developd by C Grant, Click here to learn about the Story @ /n     Click here to learn how to play @"
-
-@app.route ('/about/story')
-def story():
-    return "Your a ravvller in he Appalachain Mountains searhcing for a new life"
-
-@app.route ('/about/gameplay')
-def gameplay():
-    return "This ia your standard point-and-click adventure game"
-
-@app.route ('/play')
-def play():
-    return "Press Play"
-
-@app.route ('/play/game')
-def game():
-    return "        Welcome to the Appalachian Trails!"
 
 
 if __name__ == "__main__":
