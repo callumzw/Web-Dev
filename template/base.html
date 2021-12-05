@@ -6,33 +6,33 @@
 	</head>
 	<body>
 	<header>
-		<a class="header_homelink" href="http://146.176.251.152:5000" title="Go to homepage">
-			<img id="logo" src="{{ url_for('static', filename='img/logo.jpg') }}" >
+		<a href="http://146.176.251.152:5000" title="Go to homepage">
+			<img id="logo" src="{{ url_for('static', filename='gov.jpg') }}" >
 		</a>
 	</header>
 	<div id="navBar">
-		<nav class="covidNav">
-			<a href="{{ url_for('covid') }}">Covid-19</a>
-		</nav>
-		<nav class="mainNav">
+		<nav class ="mainNavBar">
 		<ul id="topMenu">
 			<li>
-			<a href="{{ url_for('news') }}">News</a>
-			</li>
-			<li>
-                        <a href="{{ url_for('topics') }}">Topics</a>
+                        <a href="{{ url_for('government') }}">Government</a>
                         </li>
 			<li>
                         <a href="{{ url_for('departments') }}">Departments</a>
                         </li>
 			<li>
-                        <a href="{{ url_for('government') }}">Government</a>
+                        <a href="{{ url_for('topics') }}">Topics</a>
+                        </li>
+			<li>
+                        <a href="{{ url_for('news') }}">News</a>
+                        </li>
+			<li style="float:left;">
+			<a href="{{ url_for('covid') }}">Coronavirus(COVID-19)</a>
                         </li>
 		</ul>
 		</nav>
 	</div>
 	<main id="content">
 		
-	</main>>
+	</main>
 	</body>
 </html>
