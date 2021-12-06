@@ -54,7 +54,7 @@ def requires_login(f):
 
 @app.route('/')
 def mainMenu():
-    return render_template('base.html')
+    return render_template('home.html')
 
 @app.errorhandler(404)
 def page_not_found(error):
@@ -79,6 +79,43 @@ def departments():
 @app.route('/government')
 def government():
     return render_template('base.html')
+
+@app.route('/economy')
+def economy():
+    return render_template('base.html')
+
+@app.route('/education')
+def education():
+    return render_template('base.html')
+
+@app.route('/healthcare')
+def healthcare():
+    return render_template('base.html')
+
+@app.route('/transport')
+def transport():
+    return render_template('base.html')
+
+@app.route('/justice')
+def justice():
+    return render_template('base.html')
+
+@app.route('/migration')
+def migration():
+    return render_template('base.html')
+
+@app.route('/environment')
+def environment():
+    return render_template('base.html')
+
+@app.route('/tax')
+def tax():
+    return render_template('base.html')
+
+@app.route('/work')
+def work():
+    return render_template('base.html')
+
 
 @app.route('/private')
 def private():

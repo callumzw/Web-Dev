@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+	<div id="homepage">
+	<div class="welcome">
+	<h2> Welcome to GOV.NP <br> </br> </h2>
+	</div>
+	<nav class "menu">
+		<ul>
+			<li class="homeNav">
+				<a href="{{ url_for('economy') }}">
+					<div class="homeContent">
+						<h3>Economy</h3>
+						<p>Budget, Finance, Tourism ... </p>
+					</div>
+				</a>
+			</li>
+			<li class="homeNav">
+                                <a href="{{ url_for('education') }}">
+                                        <div class="homeContent">
+                                                <h3>Education</h3>
+                                                <p>Holidays, Admissions, Curriculum ... </p>
+                                        </div>
+                                </a>
+                       	</li>
+			<li class="homeNav">
+                                <a href="{{ url_for('healthcare') }}">
+                                        <div class="homeContent">
+						<h3>Healthcare</h3>
+                                                <p>Insurance, Mental Health, Prescriptions ... </p>
+                                        </div>
+                                </a>
+                        </li>
+			<li class="homeNav">
+                                <a href="{{ url_for('transport') }}">
+                                        <div class="homeContent">
+                                                <h3>Transport</h3>
+                                                <p>Railway, Licenses, Eco-friendly ... </p>
+                                        </div>
+                                </a>
+                        </li>
+			<li class="homeNav">
+                                <a href="{{ url_for('justice') }}">
+                                        <div class="homeContent">
+                                                <h3>Justice & Law</h3>
+                                                <p>Security, Courts, Police ... </p>
+                                        </div>
+                                </a>
+                        </li>
+			<li class="homeNav">
+                                <a href="{{ url_for('migration') }}">
+                                        <div class="homeContent">
+                                                <h3>Migration</h3>
+                                                <p>Visas, Embassies, Immigration ... </p>
+                                        </div>
+                                </a>
+                        </li>
+			<li class="homeNav">
+                                <a href="{{ url_for('environment') }}">
+                                        <div class="homeContent">
+                                                <h3>Environment</h3>
+                                                <p>Agriculture, Climate Change, Fauna ... </p>
+                                        </div>
+                                </a>
+                        </li>
+			<li class="homeNav">
+                                <a href="{{ url_for('tax') }}">
+                                        <div class="homeContent">
+                                                <h3>Taxes & Benefits</h3>
+                                                <p>Businesses, Social Policy, Grants ... </p>
+                                        </div>
+                                </a>
+                        </li>
+			<li class="homeNav">
+                                <a href="{{ url_for('work') }}">
+                                        <div class="homeContent">
+                                                <h3>Work</h3>
+                                                <p>Minimum Wage, Health & Saftey ... </p>
+                                        </div>
+                                </a>
+                        </li>
+		</ul>
+	</nav>
+	</div>
+{% endblock %}

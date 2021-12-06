@@ -8,26 +8,25 @@ html{
 	width: 800px;
 	height: 120px;
 }
-
-ul{
+.navBar ul{
 	font-family: helvetica;
 	list-style: none;
 	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-        min-height: 60px;
+        min-height: 50px;
         background-color: #035b1c;
-	padding: 15px;
+
 }
 #covidNav{
 	float: left;
 }
-li {
+.navBar li {
 	float: right;
 	padding-right:20px;
 }
-li a {
+.navBar li a {
 	display: block;
 	text-decoration: none;
 	color: white;
@@ -36,3 +35,44 @@ li a {
 li a:hover{
 	text-decoration:underline;
 }
+h2{
+	font-family: verdana;
+	color: white;
+}
+.welcome{
+	background-color:#88001b;
+	min-height: 80px;
+	justify-content: center;
+}
+.homepage ul{
+	display:flex;
+	flex-wrap:wrap;
+	max-width:1200px;
+	list-style-type: none;
+}
+.homepage li{
+	max-width: 33.333%;
+	padding-left: 16px;
+	padding-right:16px:
+}
+.homeNav a{
+	text-decoration: none;
+	color: #035b1c;
+}
+.homeNav h3 {
+	color: #035b1c;
+	text-decoration: none;
+}
+.homeNav p {
+	text-decoration: none;
+}
+.homeNav h3:hover{
+	text-decoration: underline;
+}
+footer{
+	background-color:#88001b;
+	min-height:30px;
+	color: white;
+	float: right;
+}
+

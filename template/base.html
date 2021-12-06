@@ -10,7 +10,7 @@
 			<img id="logo" src="{{ url_for('static', filename='gov.jpg') }}" >
 		</a>
 	</header>
-	<div id="navBar">
+	<div class="navBar">
 		<nav class ="mainNavBar">
 		<ul id="topMenu">
 			<li>
@@ -33,6 +33,12 @@
 	</div>
 	<main id="content">
 		
+	{% block content %} {% endblock %}
+		
 	</main>
+	<br></br>
+	<footer>
+		<h3> GOV.NP <h3>
+	</footer>
 	</body>
 </html>
