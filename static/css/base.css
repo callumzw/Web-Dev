@@ -4,12 +4,13 @@ html{
 h1,h2,h3{
 	font-weight: normal;
 }
-.logo{
+#logo{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	width: 800px;
-	height: 120px;
+	width: 467px;
+	height: 70px;
+	margin-left: 100px;
+	margin-bottom: 15px;
 }
 .navBar ul{
 	font-family: helvetica;
@@ -78,9 +79,11 @@ h1,h2,h3{
 .homepage h3 {
 	color: #035b1c;
 	text-decoration: none;
+	font-size: 30px;
 }
 .homepage p {
 	text-decoration: none;
+	font-size: 20px;
 }
 .homepage h3:hover{
 	text-decoration: underline;
