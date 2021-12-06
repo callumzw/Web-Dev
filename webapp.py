@@ -62,7 +62,7 @@ def page_not_found(error):
 
 @app.route('/covid')
 def covid():
-    return render_template('base.html')
+    return render_template('covid.html')
 
 @app.route('/news')
 def news():

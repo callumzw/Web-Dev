@@ -1,6 +1,9 @@
 html{
 	font-family: verdana;
 }
+h1,h2,h3{
+	font-weight: normal;
+}
 .logo{
 	display: flex;
 	flex-wrap: wrap;
@@ -32,47 +35,61 @@ html{
 	color: white;
 	font-size: 23px;
 }
-li a:hover{
+.navBar li a:hover{
 	text-decoration:underline;
 }
-h2{
+.homrpage{
+	display: block;
+}
+.homepage h2{
+	background-color:#88001b;
+	min-height: 70px;
 	font-family: verdana;
 	color: white;
-}
-.welcome{
-	background-color:#88001b;
-	min-height: 80px;
-	justify-content: center;
+	margin: 0;
+	text-align: center;
+	padding: 10px;
 }
 .homepage ul{
 	display:flex;
+	align-items:flex-start;
+	flex-basis: 100%;
 	flex-wrap:wrap;
-	max-width:1200px;
+	max-width: 1200px;
 	list-style-type: none;
+	text-decoration: none;
+	margin: auto;
+	padding: 0;
 }
 .homepage li{
-	max-width: 33.333%;
-	padding-left: 16px;
-	padding-right:16px:
+	flex-grow:0;
+	flex-shrink: initial;
+	flex-basis:25%;
+	max-width: 25%;
+	padding-left: 15px;
+	padding-right: 15px;
+	text-decoration:none;
 }
-.homeNav a{
+.homepage a{
+	align-items:flex-start;
 	text-decoration: none;
 	color: #035b1c;
 }
-.homeNav h3 {
+.homepage h3 {
 	color: #035b1c;
 	text-decoration: none;
 }
-.homeNav p {
+.homepage p {
 	text-decoration: none;
 }
-.homeNav h3:hover{
+.homepage h3:hover{
 	text-decoration: underline;
 }
 footer{
-	background-color:#88001b;
 	min-height:30px;
 	color: white;
 	float: right;
+	padding: 10px;
+	background-color:#88001b;
 }
 

@@ -7,7 +7,7 @@
 	<body>
 	<header>
 		<a href="http://146.176.251.152:5000" title="Go to homepage">
-			<img id="logo" src="{{ url_for('static', filename='gov.jpg') }}" >
+			<img src="{{ url_for('static', filename='img/gov.jpg')  }}" alt="logo">
 		</a>
 	</header>
 	<div class="navBar">
@@ -30,15 +30,16 @@
                         </li>
 		</ul>
 		</nav>
-	</div>
-	<main id="content">
-		
-	{% block content %} {% endblock %}
-		
+	</div>	
+	<main class="content">
+	
+		{% block content %} {% endblock %}
+	
 	</main>
+
 	<br></br>
 	<footer>
-		<h3> GOV.NP <h3>
+		<h3><span> GOV.NP </span></h3>
 	</footer>
 	</body>
 </html>
