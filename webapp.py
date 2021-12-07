@@ -66,55 +66,55 @@ def covid():
 
 @app.route('/news')
 def news():
-    return render_template('base.html')
+    return render_template('news.html')
 
 @app.route('/topics')
 def topics():
-    return render_template('base.html')
+    return render_template('topics.html')
 
 @app.route('/departments')
 def departments():
-    return render_template('base.html')
+    return render_template('departments.html')
 
 @app.route('/government')
 def government():
-    return render_template('base.html')
+    return render_template('government.html')
 
 @app.route('/economy')
 def economy():
-    return render_template('base.html')
+    return render_template('economy.html')
 
 @app.route('/education')
 def education():
-    return render_template('base.html')
+    return render_template('education.html')
 
 @app.route('/healthcare')
 def healthcare():
-    return render_template('base.html')
+    return render_template('healthcare.html')
 
 @app.route('/transport')
 def transport():
-    return render_template('base.html')
+    return render_template('transport.html')
 
 @app.route('/justice')
 def justice():
-    return render_template('base.html')
+    return render_template('justice.html')
 
 @app.route('/migration')
 def migration():
-    return render_template('base.html')
+    return render_template('migration.html')
 
 @app.route('/environment')
 def environment():
-    return render_template('base.html')
+    return render_template('environment.html')
 
 @app.route('/tax')
 def tax():
-    return render_template('base.html')
+    return render_template('tax.html')
 
 @app.route('/work')
 def work():
-    return render_template('base.html')
+    return render_template('work.html')
 
 
 @app.route('/private')
