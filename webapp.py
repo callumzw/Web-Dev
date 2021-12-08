@@ -58,7 +58,7 @@ def mainMenu():
 
 @app.errorhandler(404)
 def page_not_found(error):
-    return "Couldnt find the page you have requested", 4040
+    return render_template('error.html')
 
 @app.route('/covid')
 def covid():
@@ -80,41 +80,66 @@ def departments():
 def government():
     return render_template('government.html')
 
-@app.route('/economy')
+@app.route('/topics/economy')
 def economy():
     return render_template('economy.html')
 
-@app.route('/education')
+@app.route('/topics/education')
 def education():
     return render_template('education.html')
 
-@app.route('/healthcare')
+@app.route('/topics/healthcare')
 def healthcare():
     return render_template('healthcare.html')
 
-@app.route('/transport')
+@app.route('/topics/transport')
 def transport():
     return render_template('transport.html')
 
-@app.route('/justice')
+@app.route('/topics/justice')
 def justice():
     return render_template('justice.html')
 
-@app.route('/migration')
+@app.route('/topics/migration')
 def migration():
     return render_template('migration.html')
 
-@app.route('/environment')
+@app.route('/topics/environment')
 def environment():
     return render_template('environment.html')
 
-@app.route('/tax')
+@app.route('/topics/tax')
 def tax():
     return render_template('tax.html')
 
-@app.route('/work')
+@app.route('/topics/work')
 def work():
     return render_template('work.html')
+
+@app.route('/news/new-measures')
+def newMeasures():
+    return render_template('new-measures.html')
+
+
+@app.route('/news/grinch-police')
+def grinchPolice():
+    return render_template('grinch-police.html')
+
+@app.route('/news/rising-sea-levels')
+def risingSeaLevels():
+    return render_template('rising-sea-levels.html')
+
+@app.route('/news/importShortages')
+def importShortages():
+    return render_template('importShortages.html')
+
+@app.route('/news/cop26')
+def cop26():
+    return render_template('cop26.html')
+
+@app.route('/news/blitzen')
+def blitzen():
+    return render_template('blitzen.html')
 
 
 @app.route('/private')

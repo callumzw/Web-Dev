@@ -1,5 +1,6 @@
 html{
 	font-family: verdana;
+	text-decoration: none;
 }
 h1,h2,h3{
 	font-weight: normal;
@@ -59,7 +60,7 @@ header{
 .navBar li a:hover{
 	text-decoration:underline;
 }
-.homrpage{
+.homepage{
 	display: block;
 }
 .homepage h2{
@@ -68,7 +69,8 @@ header{
 	font-size: 35px;
 	color: white;
 	margin: 0;
-	padding: 20px;
+	margin-bottom: 60px;
+	padding: 27px;
 	padding-left: 175px;
 }
 .homepage ul{
@@ -81,6 +83,7 @@ header{
 	text-decoration: none;
 	margin: auto;
 	padding: 0;
+	margin-bottom: 87px;
 }
 .homepage li{
 	flex-grow:0;
@@ -105,21 +108,100 @@ header{
 }
 .homepage p {
 	text-decoration: none;
-	font-size: 17px;
+	font-size: 18px;
 	margin-top:0px;
 }
 .homepage h3:hover{
 	text-decoration: underline;
 }
-.footer-body{
-	background-color:  #035b1c;
+
+.newsblock{
+	display:flex;
+        align-items:flex-start;
+        flex-basis: 100%;
+        flex-wrap:wrap;
+        max-width: 1200px;
+        list-style-type: none;
+        text-decoration: none;
+        margin: auto;
+        padding: 0;
 }
-footer span{
-	min-height:30px;
-	color: white;
-	float: right;
-	padding: 10px;
+.news{
+	display: block;
+}
+.story{
+	flex-grow:0;
+        flex-shrink: initial;
+        flex-basis:25%;
+        max-width: 25%;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: auto;
+        text-decoration:none;
+}
+.news h2{
+	margin-bottom: 30px;
+	padding: 15px;
+	font-size: 31px;
 	background-color:#88001b;
-	margin-bottom: 0px;
+        font-family: verdana;
+        color: white;
+        margin: 0;
+        margin-bottom: 60px;
+        padding: 20px;
+        padding-left: 175px;
+
+}
+.news h3{
+	color: #035b1c;
+        text-decoration: none;
+        font-size: 24px;
+        margin-bottom: 10px;
+}
+.news h3:hover{
+	text-decoration: underline;
+}
+.news a {
+	color: #035b1c;
+	text-decoration: none;
+}
+.news p{
+	text-decoration: none;
+        font-size: 17px;
+	color: #035b1c;
+	margin-bottom:40px;
 }
 
+.footer-body{
+	background-color:  #035b1c;
+	display: block;
+	height; 50px;
+	margin-top: 80px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+footer h3{
+	color: white;
+	text-align: right;
+	margin: 0px;
+}
+footer span{
+	min-height: 30px;
+	background-color:#88001b;
+	padding: 20px;
+}
+
+.error h2 {
+	margin: 40px;
+	text-align: center;
+	color: #88001b;
+	padding: 20px;
+	font: verdana;
+	font-size: 80px;
+}
+.error p{
+	text-align: center;
+	color: #035b1c;
+	font-size: 30px;
+	font: helvetica;
+}

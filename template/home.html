@@ -3,7 +3,6 @@
 	<div class="homepage">
 		<h2> Welcome to GOV.NP</h2>
 	<nav class "menu">
-		</br></br></br>
 		<ul>
 			<li class="homeNav">
 				<a href="{{ url_for('economy') }}">
@@ -79,5 +78,34 @@
                         </li>
 		</ul>
 	</nav>
+	<div class="news">
+		<h2>News</h2>
+		<nav class="newsblock">
+		<div class="story">
+			<a href="{{ url_for('newMeasures') }})">
+				<h3>Newest measures implemented with the return of heavy work schedules</h3>
+				<div class="news-text">
+					<p>With Christmas Day soon on the horizon, measures have been put into place to ensure cases remain low with the increase work hours...</p>
+				</div>
+			</a>
+		</div>
+		<div class="story">
+			<a href="{{ url_for('grinchPolice') }})">
+                                <h3>The Grinch has been killed while in police custody</h3>
+                                <div class="news-text">
+                                        <p>An Investiagtion is underway into the police force follwing the death of the Grinch whiel in police custody, with further reforms being called...</p>
+                                </div>
+                        </a>
+		</div>
+		<div class="story">
+			<a href="{{ url_for('risingSeaLevels') }})">
+                                <h3>Rising sea levels putting homes under threat.</h3>
+                                <div class="news-text">
+                                        <p>Climate change is putting further homes under threat with rising sea levels and melting of ice within the North Pole...</p>
+                                </div>
+                        </a>
+		</div>
+		</nav>
+	</div>
 	</div>
 {% endblock %}
