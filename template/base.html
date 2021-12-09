@@ -37,6 +37,17 @@
 		{% block content %} {% endblock %}
 	
 	</main>
+
+	<div class=’cookie-banner’ style=’display: none’>
+		<div class="cookie-flex">
+		<p>
+    	By using our website, you agree to our 
+	<a href="{{ url_for('cookies') }}">cookie policy</a>
+ 	 .</p>
+	<button class="btnCookie"> Accept <button>
+		</div>
+		</div>
+
 	<footer class="footer-body">
 		<h3><span> GOV.NP </span></h3>
 	</footer>

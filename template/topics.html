@@ -1,7 +1,289 @@
 {% extends "base.html" %}
 {% block content %}
 
-<p> Economy	Education 	Healthcare</p>
+ <div class="topic-list">
+                <h2>Topics</h2>
+                <nav class="topics">
+                <div class="topic areas">
+                        <a href="{{ url_for('economy') }}">
+                                <h3>Economy</h3>
+			</a>
+                                <div>
+					<ul id="topics">
+						<li>
+							<a href="{{ url_for('agriculture') }}">Agriculture</a>
+                		       		 </li>
+              			        	<li>
+                		        		<a href="{{ url_for('fisheries') }}">Fisheries</a>
+       			                	</li>
+                		        	<li>
+                		        		<a href="{{ url_for('finance') }}">Financial sector</a>
+                		        	</li>
+                		        	<li>
+                		        		<a href="{{ url_for('livestock') }}">Livestock farming</a>
+                		        	</li>
+						<li>
+                                                        <a href="{{ url_for('tourism') }}">Tourism</a>
+                                                </li>
+						<li>
+                                                        <a href="{{ url_for('protection') }}">Consumer protection</a>
+                                                </li>
+					</ul>
+                                </div>
+
+				<hr>
+
+				<a href="{{ url_for('education') }}">
+                                <h3>Education</h3>
+                        </a>
+                                <div>
+                                        <ul id="topics">
+                                                <li>
+                                                        <a href="{{ url_for('terms') }}">Term times</a>
+                                                 </li>
+                                                <li>
+							<a href="{{ url_for('holidays') }}">Holdiays</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('admissions') }}">Admissions</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('curriculum') }}">Curriculum</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('disabilitySupport') }}">Disability Support</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('primary') }}">Primary education</a>
+                                                </li>
+						<li>
+                                                        <a href="{{ url_for('secondary') }}">Secondary education</a>
+                                                </li>
+						<li>
+                                                        <a href="{{ url_for('apprenticeships') }}">Apprenticeships</a>
+                                                </li>
+	                                        <li>
+                                                        <a></a>
+                                                </li>
+
+					</ul>
+                                </div>
+			
+			<hr>
+
+				<a href="{{ url_for('healthcare') }}">
+                                <h3>Healthcare</h3>
+                        </a>
+                                <div>
+                                        <ul id="topics">
+                                                <li>
+                                                        <a href="{{ url_for('insurance') }}">Health Insurance</a>
+                                                 </li>
+                                                <li>
+                                                        <a href="{{ url_for('mentalHealth') }}">Mental health support</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('prescriptions') }}">Prescriptions</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('drugAwareness') }}">Drug Awareness</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('childcare') }}">Childcare</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('vaccination') }}">Vaccination</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('food') }}">Food</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('exercise') }}">Sport & Exercise</a>
+                                                </li>
+	                                      <li>
+                                                        <a></a>
+                                                </li>
+
+					</ul>
+                            </div>
+
+			     <hr>
+
+				<a href="{{ url_for('transport') }}">
+                                <h3>Transport</h3>
+                        </a>
+                                <div>
+                                        <ul id="topics">
+                                                <li>
+                                                        <a href="{{ url_for('railway') }}">Rail network and travel</a>
+                                                 </li>
+                                                <li>
+                                                        <a href="{{ url_for('license') }}">Driving & vehicle licenses</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('roads') }}">Road maintinence</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('ecoFriendly') }}">Eco-friendly travel</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('boating') }}">Boating</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('aviation') }}">Aviation</a>
+                                                </li>
+                                        </ul>
+                                </div>
+
+				<hr>
+
+			 <a href="{{ url_for('justice') }}">
+                                <h3>Justice & Law</h3>
+                        </a>
+                                <div>
+                                        <ul id="topics">
+                                                <li>
+                                                        <a href="{{ url_for('security') }}">National Security</a>
+                                                 </li>
+                                                <li>
+                                                        <a href="{{ url_for('courts') }}">Courts & Judges</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('police') }}">Police Force</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('discrimination') }}">Discrimination</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('violentCrimes') }}"> Violent crimes</a>
+                                                </li>
+	                                        <li>
+                                                        <a></a>
+                                                </li>
+	
+					</ul>
+                                </div>
+
+				 <hr>
+
+				<a href="{{ url_for('migration') }}">
+					<h3>Migration</h3>
+                        </a>
+                                <div>
+                                        <ul id="topics">
+                                                <li>
+                                                        <a href="{{ url_for('visas') }}">Visas And Documents</a>
+                                                 </li>
+                                                <li>
+                                                        <a href="{{ url_for('embassies') }}">Embassies & Consulates</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('immigration') }}">Immigration</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('asylum') }}">Asylum policy</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('citizenship') }}">Citizenship & Nationality</a>
+                                                </li>
+		                                 <li>
+                                                        <a></a>
+                                                </li>
+
+					</ul>
+                                </div>
+
+				 <hr>
+
+
+				<a href="{{ url_for('environment') }}">
+                                        <h3>Environment</h3>
+                        </a>
+                                <div>
+                                        <ul id="topics">
+                                                <li>
+                                                        <a href="{{ url_for('climate') }}">Climate Change</a>
+                                                 </li>
+                                                <li>
+                                                        <a href="{{ url_for('fauna') }}">Fauna</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('flora') }}">Flora</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('habitat') }}">Nature & Habitat</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('waterManagement') }}">Water Management</a>
+                                                </li>
+	                                       </li>
+                                                <li>
+                                                        <a></a>
+                                                </li>
+
+					</ul>
+                                </div>
+
+				<hr>
+
+				 <a href="{{ url_for('tax') }}">
+                                        <h3>Taxes & Benefits</h3>
+                        </a>
+                                <div>
+                                        <ul id="topics">
+                                                <li>
+                                                        <a href="{{ url_for('businesses') }}">Businesses</a>
+                                                 </li>
+                                                <li>
+                                                        <a href="{{ url_for('socialPolicy') }}">Social Policy</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('grants') }}">Grants</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('childBenefits') }}">Child benefits</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('incomeTax') }}">Income Tax</a>
+                                                </li>
+						<li>
+                                                        <a href="{{ url_for('vat') }}">VAT</a>
+                                                </li>
+                                        </ul>
+                                </div>
+
+				 <hr>
+
+			<a href="{{ url_for('work') }}">
+                                        <h3>Work</h3>
+                        </a>
+                                <div>
+                                        <ul id="topics">
+                                                <li>
+                                                        <a href="{{ url_for('minimumWage') }}">Minimum wage</a>
+                                                 </li>
+                                                <li>
+                                                        <a href="{{ url_for('healthSafety') }}">Health & Safety</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('workHours') }}">Working hours</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('unemployment') }}">Unemployment</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('pension') }}">Pension</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{{ url_for('workLeave') }}">Maternity & Paternity leave</a>
+                                                </li>
+                                        </ul>
+                                </div>
+
+
+                </div>
+		</nav>
+ </div>
 
 {% endblock %}
 

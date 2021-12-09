@@ -1,8 +1,115 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="departments">
+                <h2> Departments </h2>
+        <nav class="departmentNav">
+                <ul>
+                        <li>
+                                <a href="{{ url_for('cabinet') }}">
+                                        <div class="departmentContent">
+                                                <h3>Government Cabinet</h3>
+                                        </div>
+                                </a>
+                        </li>
 
-<p> Attorney Genral	Cabient		Busienss	Culture </br></p>
-<p> Education		Envrionment	Trade		Transport </br></p>
+			 <li>
+                                <a href="{{ url_for('generalAffairs') }}">
+                                        <div class="departmentContent">
+                                                <h3>Department of General Affairs</h3>
+                                        </div>
+                                </a>
+                        </li>
 
+
+			<li>
+                                <a href="{{ url_for('economicAffairs') }}">
+                                        <div class="departmentContent">
+                                                <h3>Department of Economic Affairs</h3>
+                                        </div>
+                                </a>
+                        </li>
+
+			<li>
+                                <a href="{{ url_for('educationCulture') }}">
+                                        <div class="departmentContent">
+                                                <h3>Department of Education and Culture</h3>
+                                        </div>
+                                </a>
+                        </li>
+				
+			<li>
+                                <a href="{{ url_for('healthWelfare') }}">
+                                        <div class="departmentContent">
+                                                <h3>Department of Health, Welfare and Sport</h3>
+                                        </div>
+                                </a>
+                        </li>
+
+			<li>
+                                <a href="{{ url_for('infrastructure') }}">
+                                        <div class="departmentContent">
+                                                <h3>Department of Trasnport and Infrastructure</h3>
+                                        </div>
+                                </a>
+                        </li>
+
+			<li>
+                                <a href="{{ url_for('justiceSecurity') }}">
+                                        <div class="departmentContent">
+                                                <h3>Department of Justice and Security</h3>
+                                        </div>
+                                </a>
+                        </li>
+
+			<li>
+                                <a href="{{ url_for('foreignAffairs') }}">
+                                        <div class="departmentContent">
+                                                <h3>Department of Foreign Affairs</h3>
+                                        </div>
+                                </a>
+                        </li>
+
+			<li>
+                                <a href="{{ url_for('nature') }}">
+                                        <div class="departmentContent">
+                                                <h3>Department of Nature and Climate Policy</h3>
+                                        </div>
+                                </a>
+                        </li>
+
+			<li>
+                                <a href="{{ url_for('socialAffairs') }}">
+                                        <div class="departmentContent">
+                                                <h3>Department of Social Affairs and Benefits</h3>
+                                        </div>
+                                </a>
+                        </li>
+
+			<li>
+                                <a href="{{ url_for('workPensions') }}">
+                                        <div class="departmentContent">
+                                                <h3>Department of Work and Pensions</h3>
+                                        </div>
+                                </a>
+                        </li>
+
+			<li>
+                                <a href="{{ url_for('defense') }}">
+                                        <div class="departmentContent">
+                                                <h3>Department of Defense</h3>
+                                        </div>
+                                </a>
+                        </li>
+
+			<li>
+                                <a href="{{ url_for('financeDepartment') }}">
+                                        <div class="departmentContent">
+                                                <h3>Department of Finance</h3>
+                                        </div>
+                                </a>
+			</li>
+		</ul>
+	</nav>
+</div>
 {% endblock %}
 

@@ -13,6 +13,13 @@ header a{
 header{
 	margin-bottom: 15px;
 }
+
+hr {
+	margin-left: 150px;
+	margin-right: 150px;
+	background-color: #88001b;
+	height: 5px;
+}
 #logo {
 	width: 400px;
         height: 60px;
@@ -171,6 +178,165 @@ header{
 	color: #035b1c;
 	margin-bottom:40px;
 }
+.topic-list a{
+	text-decoration: none;
+	margin: 15px;
+	 color: #035b1c;
+	 font-size: 20px;
+}
+.topic-list a:hover{
+	text-decoration: underline;
+}
+.topic-list h2{
+	margin-bottom: 30px;
+        padding: 15px;
+        font-size: 31px;
+        background-color:#88001b;
+        font-family: verdana;
+        color: white;
+        margin: 0;
+        margin-bottom: 60px;
+        padding: 20px;
+        padding-left: 175px;
+}
+.topic-list h3{
+	margin-left: 175px;
+	color: #035b1c;
+        text-decoration: underline;
+        font-size: 25px;
+        margin-bottom: 10px;	
+}
+.topic-list ul{
+	display:flex;
+        align-items:flex-start;
+        flex-basis: 100%;
+        flex-wrap:wrap;
+        max-width: 1200px;
+        list-style-type: none;
+        text-decoration: none;
+        margin: auto;
+        padding: 0;
+        margin-bottom: 87px;
+
+}
+.topic-list li{
+	flex-grow:0;
+        flex-shrink: initial;
+        flex-basis:25%;
+        max-width: 25%;
+        padding: 30px;
+        margin: auto;
+        text-decoration:none;
+}
+
+.departments h2{
+ 	margin-bottom: 30px;
+        padding: 15px;
+        font-size: 31px;
+        background-color:#88001b;
+        font-family: verdana;
+        color: white;
+        margin: 0;
+        margin-bottom: 60px;
+        padding: 20px;
+        padding-left: 175px;
+}
+.departments h3:hover{
+	text-decoration: underline;
+}
+
+.departments a{
+	text-decoration:none;
+}
+.departments ul{
+	display:flex;
+        align-items:flex-start;
+        flex-basis: 100%;
+        flex-wrap:wrap;
+        max-width: 1200px;
+        list-style-type: none;
+        text-decoration: none;
+        margin: auto;
+        padding: 0;
+        margin-bottom: 87px;
+}
+
+.departments li {
+	flex-grow:0;
+        flex-shrink: initial;
+        flex-basis:25%;
+        max-width: 25%;
+        padding: 30px;
+        margin: auto;
+        text-decoration:none;
+}
+.departments h3 {
+	text-decoration: none;
+        margin: 20px;
+         color: #035b1c;
+         font-size: 27px;
+}
+.covid h2 {
+ margin-bottom: 30px;
+        padding: 15px;
+        font-size: 31px;
+        background-color:#88001b;
+        font-family: verdana;
+        color: white;
+        margin: 0;
+        margin-bottom: 60px;
+        padding: 20px;
+        padding-left: 175px;
+}
+
+.covid h3 {
+	text-decoration: none;
+	margin: 15px;
+       	margin-left:150px; 
+        color: #035b1c;
+        font-size: 27px;
+}
+
+.covid p {
+	text-decoration: none;
+        margin: 15px;
+	margin-left:150px;
+	margin-right: 150px;
+	margin-bottom: 50px;
+        color: #035b1c;
+        font-size: 20px;
+}
+
+.gov h2{
+	margin-bottom: 30px;
+        padding: 15px;
+        font-size: 31px;
+        background-color:#88001b;
+        font-family: verdana;
+        color: white;
+        margin: 0;
+        margin-bottom: 60px;
+        padding: 20px;
+        padding-left: 175px;
+}
+
+.gov h3 {
+	text-decoration: none;
+        margin: 15px;
+        margin-left:150px;
+        color: #035b1c;
+        font-size: 27px;
+}
+
+.gov p {
+	text-decoration: none;
+        margin: 15px;
+        margin-left:150px;
+        margin-right: 150px;
+        margin-bottom: 50px;
+        color: #035b1c;
+        font-size: 20px;
+}
 
 .footer-body{
 	background-color:  #035b1c;
@@ -189,6 +355,28 @@ footer span{
 	min-height: 30px;
 	background-color:#88001b;
 	padding: 20px;
+}
+.cookie-banner {
+  position: fixed;
+  bottom: 40px;
+  left: 10%;
+  right: 10%;
+  width: 80%;
+  padding: 5px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eee;
+  border-radius: 5px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.close {
+  height: 20px;
+  background-color: #777;
+  border: none;
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
 .error h2 {

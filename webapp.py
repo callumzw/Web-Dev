@@ -60,6 +60,11 @@ def mainMenu():
 def page_not_found(error):
     return render_template('error.html')
 
+@app.route('/cookies')
+def cookies():
+    return render_template('cookies.html')
+
+
 @app.route('/covid')
 def covid():
     return render_template('covid.html')
@@ -140,6 +145,284 @@ def cop26():
 @app.route('/news/blitzen')
 def blitzen():
     return render_template('blitzen.html')
+
+@app.route('/topics/economy/agriculture')
+def agriculture():
+    return render_template('agriculture.html')
+
+@app.route('/topics/economy/fisheries')
+def fisheries():
+    return render_template('fisheries.html')
+
+@app.route('/topics/economy/finance')
+def finance():
+    return render_template('finance.html')
+
+@app.route('/topics/economy/livestock')
+def livestock():
+    return render_template('livestock.html')
+
+@app.route('/topics/economy/tourism')
+def tourism():
+    return render_template('tourism.html')
+
+@app.route('/topics/economy/protection')
+def protection():
+    return render_template('protection.html')
+
+@app.route('/topics/education/terms')
+def terms():
+    return render_template('terms.html')
+
+@app.route('/topics/education/holdiays')
+def holidays():
+    return render_template('holidays.html')
+
+@app.route('/topics/education/admissions')
+def admissions():
+    return render_template('admissions.html')
+
+@app.route('/topics/education/curriculum')
+def curriculum():
+    return render_template('curriculum.html')
+
+@app.route('/topics/education/disabilitySupport')
+def disabilitySupport():
+    return render_template('disabilitySupport.html')
+
+@app.route('/topics/education/primary')
+def primary():
+    return render_template('primary.html')
+
+@app.route('/topics/education/secondary')
+def secondary():
+    return render_template('secondary.html')
+
+@app.route('/topics/education/apprenticeships')
+def apprenticeships():
+    return render_template('apprentieships.html')
+
+@app.route('/topics/healthcare/insurance')
+def insurance():
+    return render_template('insurance.html')
+
+@app.route('/topics/healthcare/mentalHealth')
+def mentalHealth():
+    return render_template('mentalHealth.html')
+
+@app.route('/topics/healthcare/prescriptions')
+def prescriptions():
+    return render_template('prescriptions.html')
+
+@app.route('/topics/healthcare/drugAwareness')
+def drugAwareness():
+    return render_template('drugAwareness.html')
+
+@app.route('/topics/healthcare/childcare')
+def childcare():
+    return render_template('childcare.html')
+
+@app.route('/topics/healthcare/vaccination')
+def vaccination():
+    return render_template('vaccination.html')
+
+@app.route('/topics/healthcare/food')
+def food():
+    return render_template('food.html')
+
+@app.route('/topics/healthcare/exercise')
+def exercise():
+    return render_template('exercise.html')
+
+@app.route('/topics/transport/railway')
+def railway():
+    return render_template('railway.html')
+
+@app.route('/topics/transport/license')
+def license():
+    return render_template('license.html')
+
+@app.route('/topics/transport/roads')
+def roads():
+    return render_template('roads.html')
+
+@app.route('/topics/transport/ecoFriendly')
+def ecoFriendly():
+    return render_template('ecoFriendly.html')
+
+@app.route('/topics/transport/boating')
+def boating():
+    return render_template('boating.html')
+
+@app.route('/topics/transport/aviation')
+def aviation():
+    return render_template('aviation.html')
+
+@app.route('/topics/justice/security')
+def security():
+    return render_template('security.html')
+
+@app.route('/topics/justice/courts')
+def courts():
+    return render_template('courts.html')
+
+@app.route('/topics/justice/police')
+def police():
+    return render_template('police.html')
+
+@app.route('/topics/justice/discrimination')
+def discrimination():
+    return render_template('discrimination.html')
+
+@app.route('/topics/justice/violentCrimes')
+def violentCrimes():
+    return render_template('violentCrimes.html')
+
+@app.route('/topics/migration/visas')
+def visas():
+    return render_template('visas.html')
+
+@app.route('/topics/migration/embassies')
+def embassies():
+    return render_template('embassies.html')
+
+@app.route('/topics/migration/immigration')
+def immigration():
+    return render_template('immigration.html')
+
+@app.route('/topics/migration/asylum')
+def asylum():
+    return render_template('asylum.html')
+
+@app.route('/topics/migration/citizenship')
+def citizenship():
+    return render_template('citizenship.html')
+
+@app.route('/topics/environment/climate')
+def climate():
+    return render_template('climate.html')
+
+@app.route('/topics/environment/fauna')
+def fauna():
+    return render_template('fauna.html')
+
+@app.route('/topics/environment/flora')
+def flora():
+    return render_template('flora.html')
+
+@app.route('/topics/environment/habitat')
+def habitat():
+    return render_template('habitat.html')
+
+@app.route('/topics/environment/waterManagement')
+def waterManagement():
+    return render_template('waterManagement.html')
+
+@app.route('/topics/tax/businesses')
+def businesses():
+    return render_template('businesses.html')
+
+@app.route('/topics/tax/socialPolicy')
+def socialPolicy():
+    return render_template('socialPolicy.html')
+
+@app.route('/topics/tax/grants')
+def grants():
+    return render_template('grants.html')
+
+@app.route('/topics/tax/childbenefits')
+def childBenefits():
+    return render_template('childBenefits.html')
+
+@app.route('/topics/tax/incomeTax')
+def incomeTax():
+    return render_template('incomeTax.html')
+
+@app.route('/topics/tax/vat')
+def vat():
+    return render_template('vat.html')
+
+@app.route('/topics/work/minimumWage')
+def minimumWage():
+    return render_template('minimumWage.html')
+
+@app.route('/topics/work/healthSafety')
+def healthSafety():
+    return render_template('healthSafety.html')
+
+@app.route('/topics/work/workHours')
+def workHours():
+    return render_template('workHours.html')
+
+@app.route('/topics/work/unemployment')
+def unemployment():
+    return render_template('unemployment.html')
+
+@app.route('/topics/work/pension')
+def pension():
+    return render_template('pension.html')
+
+@app.route('/topics/work/workLeave')
+def workLeave():
+    return render_template('workLeave.html')
+
+@app.route('/topics/departments/cabinet')
+def cabinet():
+    return render_template('cabinet.html')
+
+@app.route('/topics/departments/genralAffairs')
+def generalAffairs():
+    return render_template('generalAffairs.html')
+
+@app.route('/topics/departments/economicAffairs')
+def economicAffairs():
+    return render_template('economicAffairs.html')
+
+@app.route('/topics/departments/educationCulture')
+def educationCulture():
+    return render_template('educationCulture.html')
+
+@app.route('/topics/departments/healthWelfare')
+def healthWelfare():
+    return render_template('healthWelfare.html')
+
+@app.route('/topics/departments/infrastructure')
+def infrastructure():
+    return render_template('infrastructure.html')
+
+@app.route('/topics/departments/justiceSecurity')
+def justiceSecurity():
+    return render_template('justiceSecurity.html')
+
+@app.route('/topics/departments/foreignAffairs')
+def foreignAffairs():
+    return render_template('foreignAffairs.html')
+
+@app.route('/topics/departments/nature')
+def nature():
+    return render_template('nature.html')
+
+@app.route('/topics/departments/socialAffairs')
+def socialAffairs():
+    return render_template('socialAffairs.html')
+
+@app.route('/topics/departments/workPensions')
+def workPensions():
+    return render_template('workPensions.html')
+
+@app.route('/topics/departments/defense')
+def defense():
+    return render_template('defense.html')
+
+@app.route('/topics/departments/financeDepartment')
+def financeDepartment():
+    return render_template('financeDepartment.html')
+
+
+
+
+
+
 
 
 @app.route('/private')
