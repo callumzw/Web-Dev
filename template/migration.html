@@ -1,7 +1,47 @@
 {% extends "base.html" %}
 {% block content %}
 
-<p> Economy     Education       Healthcare</p>
+<div class="topics">
+        <h2>Migration</h2>
+        <nav class="topicContent">
+                <ul>
+                        <li class="topicNav">
+                                <a href="{{ url_for('visas') }}">
+                                        <div class="topicContent">
+                                                <h3>Visas and Documents</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('embassies') }}">
+                                        <div class="topicContent">
+                                                <h3>Embassies & Consulates</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('immigration') }}">
+                                        <div class="topicContent">
+                                                <h3>Immigration</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('asylum') }}">
+                                        <div class="topicContent">
+                                                <h3>Asylum</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('citizenship') }}">
+                                        <div class="topicContent">
+                                                <h3>Citizenship & Nationality</h3>
+                                        </div>
+                                </a>
+                        </li>
+	</nav>
+</div>
 
 {% endblock %}
 

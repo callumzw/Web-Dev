@@ -136,6 +136,9 @@ hr {
 .news{
 	display: block;
 }
+.newsblock {
+	margin-bottom: 150px;
+}
 .story{
 	flex-grow:0;
         flex-shrink: initial;
@@ -177,6 +180,53 @@ hr {
         font-size: 17px;
 	color: #035b1c;
 	margin-bottom:40px;
+}
+.newsStory {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: auto;
+	margin-bottom:500px;
+        text-decoration:none;	
+}
+.newsStory h3 {
+	color: #035b1c;
+        text-decoration: none;
+        font-size: 27px;
+        margin-bottom: 10px;
+}
+.newsStory p {
+	text-decoration: none;
+        font-size: 20px;
+        color: #035b1c;
+        margin-bottom:40px;
+}
+.topic h3{
+	color: #035b1c;
+        text-decoration: none;
+        font-size: 30px;
+        margin-bottom: 35px;
+	margin-left: 150px
+}
+.topic p{
+	text-decoration: none;
+        font-size: 20px;
+        color: #035b1c;
+	margin-left: 50px;
+        margin-bottom:530px;
+}
+.department h3 {
+	color: #035b1c;
+        text-decoration: none;
+        font-size: 30px;
+        margin-bottom: 35px;
+        margin-left: 150px
+}
+.department p{
+	text-decoration: none;
+        font-size: 20px;
+        color: #035b1c;
+        margin-left: 50px;
+        margin-bottom:530px;
 }
 .topic-list a{
 	text-decoration: none;
@@ -227,6 +277,56 @@ hr {
         padding: 30px;
         margin: auto;
         text-decoration:none;
+}
+.topics a {
+	text-decoration: none;
+}
+
+.topics h2{	
+margin-bottom: 30px;
+        padding: 15px;
+        font-size: 31px;
+        background-color:#88001b;
+        font-family: verdana;
+        color: white;
+        margin: 0;
+        margin-bottom: 60px;
+        padding: 20px;
+        padding-left: 175px;
+}
+
+.topics h3 {
+        color: #035b1c;
+        font-size: 28px;
+        margin-bottom: 10px;
+}
+.topicContent ul {
+
+	display:flex;
+        align-items:flex-start;
+        flex-basis: 100%;
+        flex-wrap:wrap;
+        max-width: 1200px;
+        list-style-type: none;
+        text-decoration: none;
+        margin: auto;
+        padding: 0;
+        margin-bottom: 150px;
+}
+
+.topicContent li {
+	flex-grow:0;
+        flex-shrink: initial;
+        flex-basis:25%;
+        max-width: 25%;
+        padding: 30px;
+        margin: auto;
+	margin-bottom:20px;
+        text-decoration:none;
+	color: #035b1c;
+}
+.topicContent h3:hover{
+        text-decoration: underline;
 }
 
 .departments h2{
@@ -306,16 +406,17 @@ hr {
         color: #035b1c;
         font-size: 20px;
 }
-
+.gov {
+	margin-bottom:175px;
+}
 .gov h2{
-	margin-bottom: 30px;
         padding: 15px;
         font-size: 31px;
         background-color:#88001b;
         font-family: verdana;
         color: white;
         margin: 0;
-        margin-bottom: 60px;
+        margin-bottom: 80px;
         padding: 20px;
         padding-left: 175px;
 }
@@ -323,6 +424,7 @@ hr {
 .gov h3 {
 	text-decoration: none;
         margin: 15px;
+	margin-top:50px;
         margin-left:150px;
         color: #035b1c;
         font-size: 27px;
@@ -343,8 +445,8 @@ hr {
 	display: block;
 	height; 50px;
 	margin-top: 80px;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 footer h3{
 	color: white;
@@ -352,33 +454,15 @@ footer h3{
 	margin: 0px;
 }
 footer span{
-	min-height: 30px;
 	background-color:#88001b;
-	padding: 20px;
+	padding: 15px;
 }
 .cookie-banner {
   position: fixed;
-  bottom: 40px;
-  left: 10%;
-  right: 10%;
-  width: 80%;
-  padding: 5px 14px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: #eee;
-  border-radius: 5px;
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #88001b;
 }
-.close {
-  height: 20px;
-  background-color: #777;
-  border: none;
-  color: white;
-  border-radius: 2px;
-  cursor: pointer;
-}
-
 .error h2 {
 	margin: 40px;
 	text-align: center;

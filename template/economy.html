@@ -1,7 +1,55 @@
 {% extends "base.html" %}
 {% block content %}
 
-<p> Economy hits all time highs</p>
+<div class="topics">
+        <h2>Economy</h2>
+        <nav class="topicContent">
+		<ul>
+                        <li class="topicNav">
+                                <a href="{{ url_for('agriculture') }}">
+                                        <div class="topicContent">
+                                                <h3>Agriculture</h3>
+                                        </div>
+                                </a>
+                        </li>
+			<li class="topicNav">
+                                <a href="{{ url_for('fisheries') }}">
+                                        <div class="topicContent">
+                                                <h3>Fisheries</h3>
+                                        </div>
+                                </a>
+                        </li>
+			<li class="topicNav">
+                                <a href="{{ url_for('finance') }}">
+                                        <div class="topicContent">
+                                                <h3>Finance</h3>
+                                        </div>
+                                </a>
+                        </li>
+			<li class="topicNav">
+                                <a href="{{ url_for('livestock') }}">
+                                        <div class="topicContent">
+                                                <h3>Livestock</h3>
+                                        </div>
+                                </a>
+                        </li>
+			<li class="topicNav">
+                                <a href="{{ url_for('tourism') }}">
+                                        <div class="topicContent">
+                                                <h3>Tourism</h3>
+                                        </div>
+                                </a>
+                        </li>
+			<li class="topicNav">
+                                <a href="{{ url_for('protection') }}">
+                                        <div class="topicContent">
+                                                <h3>Protection</h3>
+                                        </div>
+                                </a>
+                       </li>
+	</nav>
+</div>
+
 
 {% endblock %}
 

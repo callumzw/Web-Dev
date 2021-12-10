@@ -1,7 +1,54 @@
 {% extends "base.html" %}
 {% block content %}
 
-<p> Economy     Education       Healthcare</p>
+<div class="topics">
+        <h2>Taxes & Benefits</h2>
+        <nav class="topicContent">
+                <ul>
+                        <li class="topicNav">
+                                <a href="{{ url_for('minimumWage') }}">
+                                        <div class="topicContent">
+                                                <h3>Minimum wage</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('socialPolicy') }}">
+                                        <div class="topicContent">
+                                                <h3>Social Policy</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('grants') }}">
+                                        <div class="topicContent">
+                                                <h3>Grants</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('childBenefits') }}">
+                                        <div class="topicContent">
+                                                <h3>Child benefits</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('incomeTax') }}">
+                                        <div class="topicContent">
+                                                <h3>Income Tax</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('vat') }}">
+                                        <div class="topicContent">
+                                                <h3>VAT</h3>
+                                        </div>
+                                </a>
+                       </li>
+	</nav>
+</div>
 
 {% endblock %}
 

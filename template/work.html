@@ -1,7 +1,55 @@
 {% extends "base.html" %}
 {% block content %}
 
-<p> Economy     Education       Healthcare</p>
+<div class="topics">
+        <h2>Work</h2>
+        <nav class="topicContent">
+                <ul>
+                        <li class="topicNav">
+                                <a href="{{ url_for('minimumWage') }}">
+                                        <div class="topicContent">
+                                                <h3>Minimum wage</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('healthSafety') }}">
+                                        <div class="topicContent">
+                                                <h3>Health & Safety</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('workHours') }}">
+                                        <div class="topicContent">
+                                                <h3>Work Hours</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('unemployment') }}">
+                                        <div class="topicContent">
+                                                <h3>Unemployment</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('pension') }}">
+                                        <div class="topicContent">
+                                                <h3>Pensions</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('workLeave') }}">
+                                        <div class="topicContent">
+                                                <h3>Maternity & Paternity Leave</h3>
+                                        </div>
+                                </a>
+                       </li>
+        </nav>
+</div>
+
 
 {% endblock %}
 

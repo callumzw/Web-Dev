@@ -1,7 +1,61 @@
 {% extends "base.html" %}
 {% block content %}
 
-<p> Health system under stress from rise in cases</p>
+<div class="topics">
+        <h2>Education</h2>
+        <nav class="topicContent">
+                <ul>
+                        <li class="topicNav">
+                                <a href="{{ url_for('insurance') }}">
+                                        <div class="topicContent">
+                                                <h3>Health Insurance</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('mentalHealth') }}">
+                                        <div class="topicContent">
+                                                <h3>Mental health support</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('prescriptions') }}">
+                                        <div class="topicContent">
+                                                <h3>Prescriptions</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('drugAwareness') }}">
+                                        <div class="topicContent">
+                                                <h3>Drug Awareness</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('childcare') }}">
+                                        <div class="topicContent">
+                                                <h3>Childcare</h3>
+                                        </div>
+                                </a>
+                        </li>
+			<li class="topicNav">
+                                <a href="{{ url_for('vaccination') }}">
+                                        <div class="topicContent">
+                                                <h3>Vaccination</h3>
+                                        </div>
+                                </a>
+                        </li>
+			<li class="topicNav">
+                                <a href="{{ url_for('exercise') }}">
+                                        <div class="topicContent">
+                                                <h3>Exercise</h3>
+                                        </div>
+                                </a>
+                        </li>
+	</nav>
+</div>
 
 {% endblock %}
 

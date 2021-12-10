@@ -422,9 +422,6 @@ def financeDepartment():
 
 
 
-
-
-
 @app.route('/private')
 def private():
 # check if logged in

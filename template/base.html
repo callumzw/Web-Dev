@@ -5,11 +5,11 @@
 		<link rel ="stylesheet" href ="{{ url_for('static', filename='css/base.css') }}" type ="text/css">
 	</head>
 	<body>
-	<header>
+	<header onload="showCookie();">
+		
 		<a title="Go to homepage"  href="http://146.176.251.152:5000">
 			<img id="logo" src="{{ url_for('static', filename='img/logo.jpg')  }}" alt="logo">
 		</a>
-		<p id="clock" onload:"countdown();">Crimbo</p>
 	</header>
 	<div class="navBar">
 		<nav class ="mainNavBar">
@@ -37,17 +37,6 @@
 		{% block content %} {% endblock %}
 	
 	</main>
-
-	<div class=’cookie-banner’ style=’display: none’>
-		<div class="cookie-flex">
-		<p>
-    	By using our website, you agree to our 
-	<a href="{{ url_for('cookies') }}">cookie policy</a>
- 	 .</p>
-	<button class="btnCookie"> Accept <button>
-		</div>
-		</div>
-
 	<footer class="footer-body">
 		<h3><span> GOV.NP </span></h3>
 	</footer>

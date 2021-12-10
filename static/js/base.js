@@ -1,3 +1,26 @@
+localStorage.cookie;
+
+function showCookie(){
+	 x = document.etElemnetByClassName("cookie-banner");
+	if (localStorage.cookie == 0){
+		x.style.display = "block";
+	}
+	else if (localStorage.cookie == 1){
+		x.style.display = "none";	
+	}
+	}
+function acceptCookie {
+	x = document.etElemnetByClassName("cookie-banner");
+	localStorage.cookie = 1;
+	 x.style.cookie = "none";
+}
+
+function rejectCookie {
+	x = document.etElemnetByClassName("cookie-banner");
+	localStorage.cookie = 0;
+	x.style.cookie = "none";
+}
+
 function countdown(){
 	var endDate = new Date("Dec 25, 2021 00:00:00").getTime();
 	var x = setInterval(function() {
@@ -27,12 +50,3 @@ function countdown(){
 }
 
 }
-
-if (localStorage.getItem(‘cookieSeen’) != ‘shown’) {
-	  $(‘.cookie-banner’).delay(2000).fadeIn();
-	  localStorage.setItem(‘cookieSeen’,’shown’)
-};
-
-$(‘.close’).click(function() {
-	  $(‘.cookie-banner’).fadeOut();
-})

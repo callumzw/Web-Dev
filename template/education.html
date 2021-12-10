@@ -1,7 +1,69 @@
 {% extends "base.html" %}
 {% block content %}
 
-<p> Govvernment announces new apprenticeship schemes</p>
+<div class="topics">
+        <h2>Education</h2>
+        <nav class="topicContent">
+                <ul>
+                        <li class="topicNav">
+                                <a href="{{ url_for('terms') }}">
+                                        <div class="topicContent">
+                                                <h3>Term times</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('holidays') }}">
+                                        <div class="topicContent">
+                                                <h3>Holidays</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('admissions') }}">
+                                        <div class="topicContent">
+                                                <h3>Admissions</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('curriculum') }}">
+                                        <div class="topicContent">
+                                                <h3>Curriculum</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('disabilitySupport') }}">
+                                        <div class="topicContent">
+                                                <h3>Disability support</h3>
+                                        </div>
+                                </a>
+                        </li>
+                        <li class="topicNav">
+                                <a href="{{ url_for('primary') }}">
+                                        <div class="topicContent">
+                                                <h3>Primary education</h3>
+                                        </div>
+                                </a>
+                       </li>
+		       <li class="topicNav">
+                                <a href="{{ url_for('secondary') }}">
+                                        <div class="topicContent">
+                                                <h3>Secondary education</h3>
+                                        </div>
+                                </a>
+                       </li>
+		       <li class="topicNav">
+                                <a href="{{ url_for('apprenticeships') }}">
+                                        <div class="topicContent">
+                                                <h3>Apprenticeships</h3>
+                                        </div>
+                                </a>
+                       </li>
+        </nav>
+</div>
+
 
 {% endblock %}
 
